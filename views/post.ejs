@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= siteData.name %> | <%= postData.title %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('partials/header', { siteData }) %>
+    <main>
+        <h2>
+            <%= postData.title %>
+        </h2>
+        <p>
+            <%= postData.body %>
+        </p>
+    </main>
+    <%- include('partials/footer', { siteData }) %>
+</body>
+
+</html>
