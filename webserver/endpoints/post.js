@@ -28,8 +28,6 @@ postRef.get()
       return "post not found";
     } else {
       const post = doc.data();
-      log.success(`Post: ${post.title}, written by ${post.user}, on ${post.date}`);
-      log.success(`Body: ${post.body}`);
         
         postData.user = post.user;
         postData.date = post.date;
