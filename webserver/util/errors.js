@@ -1,5 +1,5 @@
 // REQUIREMENTS
-const sd = require("../../config/siteData.json"); 
+const serverData = require("../../config/serverData.json"); 
 
 module.exports = (app) => {
     // HANDLE REQUESTS
@@ -9,7 +9,7 @@ module.exports = (app) => {
 
       if (!res.headersSent) {
         // DATA SENT
-        siteData.name = sd.name + " | Page not Found";
+        siteData.name = serverData.name + " | Page not Found";
         siteData.errorCode = 404;
 
         errorData.code = 404;
@@ -18,7 +18,7 @@ module.exports = (app) => {
 
         // SEND DATA
         res.status(errorData.code)
-        res.render("other/errors", { siteData, errorData })
+        res.render("other/errors", { serverData, siteData, errorData })
       }
     });
 }

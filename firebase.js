@@ -9,7 +9,7 @@ initializeApp({
   credential: cert(serviceAccount)
 });
 
-log.success("Database Loaded...")
+log.success("Successfuly connected to the Database.")
 
 return db = getFirestore();
 }

@@ -1,6 +1,6 @@
 // SITE DATA
-const sd = require("../../config/siteData.json");
-let siteData = { name: sd.name + " | Home", description: sd.description };
+const serverData = require("../../config/serverData.json");
+let siteData = { name: serverData.name + " | Home", description: serverData.description };
 
 module.exports = (app) => {
 	return {
@@ -8,7 +8,7 @@ module.exports = (app) => {
 		requestType: "get",
 		execute: async (req, res) => {
             // LOAD PAGE
-			res.status(200).render("home", { siteData })
+			res.status(200).render("home", { serverData, siteData })
 		}
 	}
 }

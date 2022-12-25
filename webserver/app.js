@@ -9,6 +9,7 @@ const app = express();
 
 // MIDDLEWARE
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 app.use(
     express.urlencoded({
       extended: false,
@@ -27,6 +28,6 @@ require("./endpoints")(app);
 
 //  INITIATE
 app.listen(config.port, () => {
-  log.success('Server listening on port 3000');
+  log.success('Server listening on port ' + config.port + ".");
 });
 }

@@ -18,7 +18,7 @@ module.exports = (app) => {
     }
 	
     // LOG
-    log.verbose(`Successfully Added ${added} Routes to API`);
+    log.success(`Successfully Added ${added} Routes to API.`);
 
     // ERRORS HANDLING
     require("./util/errors")(app);

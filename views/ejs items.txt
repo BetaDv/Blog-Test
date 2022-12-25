@@ -1,0 +1,24 @@
+// use this to add a postData variable in html page itself
+
+<% if(postData.name !== "") {%>
+    <script>const postData = <%- JSON.stringify(postData, 2, 1)%></script>
+<% } %>
+
+
+// use this to add header and footer to page
+
+<%- include('partials/header', { serverData }) %>
+<%- include('partials/footer', { serverData }) %>
+
+
+
+TO DO:
+
+// login text in header
+<% if(userData === undefined) {%>
+<li><a href="/login">Login</a></li>
+<% } else {%>
+<li><a href="/profile"><img src=<%= userData.profilePicture %>> <%= userData.username %></a></li>
+<% } %>
+
+# profile picture must be Base64

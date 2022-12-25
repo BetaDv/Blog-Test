@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+body {
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #555;
+}
+
+.blog-title {
+    margin: 0;
+    padding: 20px;
+    font-size: 2em;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.right-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.right-nav li {
+    margin: 0 10px;
+}
+
+.right-nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.right-nav a:hover {
+    color: rgba(255, 255, 255, 0.815);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+main h2 {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #555;
+}
+
+/* BLOG PAGE CONTENT */
+
+
+.blog-post-container {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.blog-post-title-container {
+    background-color: #555;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.blog-post-content-container {
+    background-color: #555;
+    color: #fff;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.user-info-container {
+    background-color: #555;
+    color: #fff;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.user-info-container-text {
+    text-align: center;
+    margin-bottom: 20px;
+}

@@ -2,12 +2,24 @@
 <html>
 
 <head>
-    <title><%= siteData.name %></title>
+    <title>
+        <%= siteData.name%>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <h1><%= errorData.code + " " + errorData.short %></h1>
-    <p><%= errorData.message %></p>
+    <%- include('../partials/header', { serverData }) %>
+        <main style="text-align: center; padding-top: 15rem;">
+            <h1>
+                <%= errorData.code + " | " + errorData.short %>
+            </h1>
+            <p>
+                <%= errorData.message %>
+            </p>
+        </main>
+        <%- include('../partials/footer', { serverData }) %>
 </body>
 
 </html>

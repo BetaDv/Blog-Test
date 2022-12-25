@@ -5,20 +5,44 @@
     <title>
         <%= siteData.name %> | <%= postData.title %>
     </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <%- include('partials/header', { siteData }) %>
-    <main>
-        <h2>
-            <%= postData.title %>
-        </h2>
-        <p>
-            <%= postData.body %>
-        </p>
-    </main>
-    <%- include('partials/footer', { siteData }) %>
+    <%- include('partials/header', { serverData }) %>
+
+        <main class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog-post-container">
+                        <div class="blog-post-title-container">
+                            <h2>
+                                <%= postData.title %>
+                            </h2>
+                        </div>
+                        <div class="blog-post-content-container">
+                            
+                                <%- md().render(postData.body) %>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="user-info-container">
+                        <h2 class="user-info-container-text">Post Information</h2>
+                        <p>Post Creator: <%= postData.user %>
+                        </p>
+                        <p>Creation Date: <%= postData.date.toDate().toDateString() + ", at " +
+                                postData.date.toDate().toLocaleTimeString() %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <%- include('partials/footer', { serverData }) %>
 </body>
 
 </html>
