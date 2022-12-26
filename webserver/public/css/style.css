@@ -1,106 +1,184 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 
 body {
-    font-family: 'Comfortaa', cursive;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: "Comfortaa", cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #555;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #555;
 }
 
 .blog-title {
-    margin: 0;
-    padding: 20px;
-    font-size: 2em;
+  margin: 0;
+  padding: 20px;
+  font-size: 2em;
 }
 
 .right-nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .right-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .right-nav li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .right-nav a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 .right-nav a:hover {
-    color: rgba(255, 255, 255, 0.815);
+  color: rgba(255, 255, 255, 0.815);
 }
 
 main {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 main h2 {
-    margin: 0;
+  margin: 0;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #555;
+  text-align: center;
+  padding: 20px;
+  background-color: #555;
 }
 
 /* BLOG PAGE CONTENT */
 
-
 .blog-post-container {
-    color: #fff;
-    margin-bottom: 20px;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .blog-post-title-container {
-    background-color: #555;
-    color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
+  background-color: #555;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .blog-post-content-container {
-    background-color: #555;
-    color: #fff;
-    padding: 20px;
-    height: 100%;
-    width: 100%;
-    word-wrap: break-word;
+  background-color: #555;
+  color: #fff;
+  padding: 20px;
+  margin: 20px;
+  height: 100%;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .user-info-container {
-    background-color: #555;
-    color: #fff;
-    padding: 20px;
-    height: 100%;
-    width: 100%;
+  background-color: #555;
+  color: #fff;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
 }
 
 .user-info-container-text {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-info-creator {
+  text-align: center;
+  text-decoration: none;
+  color: aqua;
+}
+
+.user-info-creator:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* PROFILE PAGE CONTENT */
+
+.profile-data-container {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.profile-data-photo {
+  border-radius: 100%;
+  display: inline;
+  margin-left: 30%;
+}
+
+.profile-data-username {
+  display: inline;
+  padding: 20px;
+}
+
+.profile-data-name-container {
+  background-color: #555;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.profile-data-description-container {
+  color: #fff;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.profile-user-info-container {
+  background-color: #555;
+  color: #fff;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.profile-user-info-container-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-user-info-blog-posts {
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.profile-user-info-blog-posts-list {
+  display: grid;
+}
+
+.profile-user-info-blog-posts-list a {
+  text-align: center;
+  text-decoration: none;
+  color: aqua;
+}
+
+.profile-user-info-blog-posts-list a:hover {
+  color: rgba(255, 255, 255, 0.6);
 }

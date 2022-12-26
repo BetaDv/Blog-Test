@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title><%= siteData.name%></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-<body>
-        <%- include('partials/header', { serverData }) %>
+  <body>
+    <%- include('partials/header', { serverData }) %>
     <main>
-        <h2>Recent Blog Posts</h2>
-        <ul>
-            <li><a href="/post/e8FmS1njQ4Nd17fi9SCZ">Development Testing Post</a></li>
-            <li><a href="/post/VQ9rUZ9OWfYZLzONjJ4M">Markdown Post Test</a></li>
-            <li><a href="/post/post-3">Post 3</a></li>
-        </ul>
+      <h2>Recent Blog Posts</h2>
+      <ul>
+        <li>
+          <a href="/post/e8FmS1njQ4Nd17fi9SCZ">Development Testing Post</a>
+        </li>
+        <li><a href="/post/VQ9rUZ9OWfYZLzONjJ4M">Markdown Post Test</a></li>
+        <li><a href="/post/post-3">Post 3</a></li>
+      </ul>
     </main>
-        <%- include('partials/footer', { serverData }) %>
-</body>
-
+    <%- include('partials/footer', { serverData }) %>
+  </body>
 </html>

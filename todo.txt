@@ -1,0 +1,3 @@
+fix offset body container for posts
+finish the profile page
+make the home page update live according to the latest 10 blog posts (each within a container of their own)

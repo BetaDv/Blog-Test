@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title><%= siteData.name%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-<head>
-    <title>
-        <%= siteData.name%>
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-
-<body>
+  <body>
     <%- include('../partials/header', { serverData }) %>
-        <main style="text-align: center; padding-top: 15rem;">
-            <h1>
-                <%= errorData.code + " | " + errorData.short %>
-            </h1>
-            <p>
-                <%= errorData.message %>
-            </p>
-        </main>
-        <%- include('../partials/footer', { serverData }) %>
-</body>
-
+    <main style="text-align: center; padding-top: 15rem">
+      <h1><%= errorData.code + " | " + errorData.short %></h1>
+      <p><%= errorData.message %></p>
+    </main>
+    <%- include('../partials/footer', { serverData }) %>
+  </body>
 </html>

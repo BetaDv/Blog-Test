@@ -1,4 +1,3 @@
-
 // LOAD DATABASE
 const DB = require("./firebase")();
 
