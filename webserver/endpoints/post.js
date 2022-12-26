@@ -14,13 +14,34 @@ module.exports = (app) => {
     const db = app.db;
 
     const markdownContent = () => {
-      const md = require('markdown-it')({
-  html: false,
-  linkify: true,
+      const hljs = require('highlight.js');
+      const marked = require('markdown-it')({
+  html: true,
   breaks: true,
-  typographer: true
-    });
+  xhtmlOut: true,
+  linkify: true,
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return '<pre class="hljs"><code>' +
+               hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
+               '</code></pre>';
+      } catch (__) {}
+    }
 
+    return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+  }
+});
+marked.linkify.set({ fuzzyEmail: false });
+      const createDOMPurify = require('dompurify');
+const { JSDOM } = require('jsdom');
+
+const window = new JSDOM('').window;
+const purify = createDOMPurify(window);
+      let md = {
+        marked,
+        purify
+      }
     return md;
     }
 const errorPage = (res) => {
@@ -34,7 +55,7 @@ const errorPage = (res) => {
 
         // SEND DATA
         
-        return res.status(errorData.code).render("other/errors", { serverData, siteData, errorData, md: markdownContent })
+        return res.status(errorData.code).render("other/errors", { serverData, siteData, errorData, purify: markdownContent().purify, marked: markdownContent().marked })
     }
     const checkPost = (id, res) => {
         if(id === undefined) return errorPage(res);
@@ -62,7 +83,7 @@ postRef.get()
         postData.title = post.title;
 
         // LOAD PAGE
-			  return res.status(200).render("post", { serverData, siteData, postData, md: markdownContent });;
+			  return res.status(200).render("post", { serverData, siteData, postData, purify: markdownContent().purify, marked: markdownContent().marked });;
     }
   })
   .catch(err => {
